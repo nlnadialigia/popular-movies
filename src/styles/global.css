@@ -1,0 +1,113 @@
+:root {
+  --bg-color: #17162e;
+  --bg-card: #1d1c3b;
+  --text-grey: #acacac;
+  --text-white: #ffffff;
+  --input: #8a8a8a;
+  --checkbox: #706ea8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  margin: 2rem;
+}
+
+header {
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main {
+  margin: 2rem;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+
+input[type="text"] {
+  width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-white);
+  border: none;
+  border-radius: 0.4rem;
+  
+  background-image: url(../assets/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: right 1rem bottom 50%;
+  background-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.checkbox {
+  margin: 2rem auto;
+}
+
+#movies {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.movie {
+  background-color: var(--bg-card);
+  border-radius: 0.4rem;
+  margin: auto 2rem;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.icons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.icons img {
+  margin-right: 0.5rem;
+  width: 1rem;
+}
+
+.description {
+  text-align: justify;
+  color: var(--text-grey);
+}
+
+footer {
+  text-align: center;
+  color: var(--text-grey);
+  font-size: 0.8rem;
+}
+
+footer img {
+  width: 0.8rem;
+}
