@@ -7,11 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/global.css">
-  <script src="./scripts/movies.js" defer></script>
+  <link rel="stylesheet" href="./src/styles/global.css">
   <title>Filmes Populares</title>
 </head>
-<body onload="renderMovies()">
+<body>
   <header>
     <h1>Filmes Populares</h1>
   </header>
@@ -26,7 +25,8 @@
     <div id="movies"></div>
   </main>
   <footer>
-    <p>Feito com <img src="./assets//full-heart.svg" alt=""> por Nádia Ligia</p>
+    <p>Feito com <img src="./src/assets/full-heart.svg" alt=""> por Nádia Ligia</p>
   </footer>
+  <script type="module" src="./src/scripts/movies.js"></script>
 </body>
 </html>
