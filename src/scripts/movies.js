@@ -1,14 +1,21 @@
-import {apiKey} from './tmdb.config.js'
-import {useAPI} from './useAPI.js'
+import { apiKey } from './tmdb.config.js';
+import { useAPI } from './useAPI.js';
 
-const movies = document.querySelector("#movies")
+const movies = document.querySelector('#movies');
 
-const baseURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
+const baseURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+
+function favorite(type) {
+  if (type) {
+    return './src/assets/full-heart.svg';
+  }
+  return './src/assets/heart.svg';
+}
 
 async function renderMovies() {
-  const moviesList = await useAPI(baseURL)
-  moviesList.forEach(movie => {
-    const imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`
+  const moviesList = await useAPI(baseURL);
+  moviesList.forEach((movie) => {
+    const imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
     movies.innerHTML += `
       <div class="movie">
         <img class="logo" src=${imageURL}>
@@ -21,17 +28,8 @@ async function renderMovies() {
         </div>
         <p class="description">${movie.overview}</p>
      </div>
-    `
-  })
+    `;
+  });
 }
 
-function favorite(type) {
-  if (type) {
-    return `./src/assets/full-heart.svg`
-  } else {
-    return `./src/assets/heart.svg`
-  }
-}
-
-window.onload = renderMovies
-
+window.onload = renderMovies;
