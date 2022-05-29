@@ -17,10 +17,11 @@
   <main>
     <div class="search">
       <input type="text" name="search" id="search" placeholder="Digite algum filme para pesquisar...">
-      <p class="checkbox">
-        <input type="checkbox" name="show" id="show">
-        Mostrar meus filmes favoritos apenas
-      </p>
+      <img src="./src/assets/search-icon.svg" alt="Ícone de pesquisa" class="searchIcon">
+    </div>
+    <div class="favorites">
+      <input type="checkbox" name="show" id="show">
+      <label for="show">Mostrar meus filmes favoritos apenas</label>
     </div>
     <div id="movies"></div>
   </main>
@@ -28,5 +29,6 @@
     <p>Feito com <img src="./src/assets/full-heart.svg" alt=""> por Nádia Ligia</p>
   </footer>
   <script type="module" src="./src/scripts/movies.js"></script>
+  <script type="module" src="./src/scripts/search.js"></script>
 </body>
 </html>
