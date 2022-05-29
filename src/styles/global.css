@@ -45,6 +45,10 @@ main {
   border-radius: 0.4rem;
 }
 
+.searchIcon {
+  cursor: pointer;
+}
+
 .favorites {
   display: flex;
   justify-content: center;
