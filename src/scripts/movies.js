@@ -1,28 +1,12 @@
-import {apiKey, apiToken} from './tmdb.config.js'
+import {apiKey} from './tmdb.config.js'
+import {useAPI} from './useAPI.js'
 
 const movies = document.querySelector("#movies")
 
-const baseURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-
-const moviesData = async () => {
-  try {
-    const response = await fetch(baseURL, { 
-      headers: new Headers ({
-        Authorization: `Bearer ${apiToken}`
-      }),
-      mode: "cors"
-    })
-    let data = await response.json()
-    data = data.results
-    
-    return data
-  } catch (error) {
-    console.log(error);
-  }
-}
+const baseURL = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
 
 async function renderMovies() {
-  const moviesList = await moviesData()
+  const moviesList = await useAPI(baseURL)
   moviesList.forEach(movie => {
     const imageURL = `https://image.tmdb.org/t/p/original${movie.poster_path}`
     movies.innerHTML += `
