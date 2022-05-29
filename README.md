@@ -50,6 +50,8 @@ O objetivo do projeto é desenvolver uma página com filmes populares, consumind
 
 - Construção do layout com dados estáticos à partir do layout disponibilizado.
 - Criação dinâmica dos filmes através do javascript e manipulação do DOM.
+- Consumir a lista de filmes mais populares no momento, segundo a API do The Movie Database.
+- Buscar filmes específicos com a barra de pesquisa quando o usuário apertar a tecla "Enter" ou clicar no ícone de pesquisa.
 
 <br>
 
